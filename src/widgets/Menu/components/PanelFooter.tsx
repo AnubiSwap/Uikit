@@ -56,7 +56,9 @@ const PanelFooter: React.FC<Props> = ({
 
   return (
     <Container>
+      <a href="https://rugdoc.io/project/anubiswap/">
       <img src="https://rugdoc.io/assets/2021/06/rugdoc-review-badge-with-glow.png"/>
+      </a>
       <SocialEntry>
         <CakePrice cakePriceUsd={cakePriceUsd} />
         <SocialLinks />

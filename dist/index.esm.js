@@ -3510,7 +3510,8 @@ var PanelFooter = function (_a) {
                 React.createElement(Icon$1c, null))));
     }
     return (React.createElement(Container, null,
-        React.createElement("img", { src: "https://rugdoc.io/assets/2021/06/rugdoc-review-badge-with-glow.png" }),
+        React.createElement("a", { href: "https://rugdoc.io/project/anubiswap/" },
+            React.createElement("img", { src: "https://rugdoc.io/assets/2021/06/rugdoc-review-badge-with-glow.png" })),
         React.createElement(SocialEntry, null,
             React.createElement(CakePrice$1, { cakePriceUsd: cakePriceUsd }),
             React.createElement(SocialLinks$1, null))));

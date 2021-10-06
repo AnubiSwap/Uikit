@@ -3525,7 +3525,7 @@ var PanelFooter = function (_a) {
     }
     return (React__default['default'].createElement(Container, null,
         React__default['default'].createElement("a", { href: "https://jagosafer.io/anubiswap" },
-            React__default['default'].createElement("img", { src: "https://jagosafer.io/flags/greenflag.svg" })),
+            React__default['default'].createElement("img", { src: "https://jagosafer.io/flags/greenflag.svg", alt: "jago flag", width: "230", height: "60" })),
         React__default['default'].createElement("a", { href: "https://rugdoc.io/project/anubiswap/" },
             React__default['default'].createElement("img", { src: "https://rugdoc.io/assets/2021/06/rugdoc-review-badge-with-glow.png" })),
         React__default['default'].createElement(SocialEntry, null,

@@ -57,7 +57,7 @@ const PanelFooter: React.FC<Props> = ({
   return (
     <Container>
       <a href="https://jagosafer.io/anubiswap">
-      <img src="https://jagosafer.io/flags/greenflag.svg" alt="jago flag" width="230" height="60"/>
+      <img src="https://jagosafer.io/flags/greenflag.svg"/>
       </a>
       <a href="https://rugdoc.io/project/anubiswap/">
       <img src="https://rugdoc.io/assets/2021/06/rugdoc-review-badge-with-glow.png"/>

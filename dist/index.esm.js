@@ -3510,11 +3510,10 @@ var PanelFooter = function (_a) {
                 React.createElement(Icon$1c, null))));
     }
     return (React.createElement(Container, null,
-        React.createElement("div", null,
-            React.createElement("a", { href: "https://jagosafer.io/anubiswap" },
-                React.createElement("img", { style: { width: "230", height: "60" }, src: "https://jagosafer.io/flags/greenflag.svg", alt: "jago flag" })),
-            React.createElement("a", { href: "https://rugdoc.io/project/anubiswap/" },
-                React.createElement("img", { src: "https://rugdoc.io/assets/2021/06/rugdoc-review-badge-with-glow.png" }))),
+        React.createElement("a", { href: "https://jagosafer.io/anubiswap" },
+            React.createElement("img", { src: "https://jagosafer.io/flags/greenflag.svg", alt: "jago flag", width: "230", height: "60" })),
+        React.createElement("a", { href: "https://rugdoc.io/project/anubiswap/" },
+            React.createElement("img", { src: "https://rugdoc.io/assets/2021/06/rugdoc-review-badge-with-glow.png" })),
         React.createElement(SocialEntry, null,
             React.createElement(CakePrice$1, { cakePriceUsd: cakePriceUsd }),
             React.createElement(SocialLinks$1, null))));

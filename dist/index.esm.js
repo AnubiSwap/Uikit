@@ -3512,7 +3512,7 @@ var PanelFooter = function (_a) {
     return (React.createElement(Container, null,
         React.createElement("div", null,
             React.createElement("a", { href: "https://jagosafer.io/anubiswap" },
-                React.createElement("img", { width: "230", height: "60", src: "https://jagosafer.io/flags/greenflag.svg" })),
+                React.createElement("img", { width: 230, height: 60, src: "https://jagosafer.io/flags/greenflag.svg" })),
             React.createElement("a", { href: "https://rugdoc.io/project/anubiswap/" },
                 React.createElement("img", { src: "https://rugdoc.io/assets/2021/06/rugdoc-review-badge-with-glow.png" }))),
         React.createElement(SocialEntry, null,

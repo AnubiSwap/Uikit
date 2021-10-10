@@ -61,7 +61,7 @@ const PanelFooter: React.FC<Props> = ({
       <img src="https://jagosafer.io/flags/greenflag.svg" style={{height: "60px",width:"230px"}} width={230} height={60} />
       </a>
       <a href="https://rugdoc.io/project/anubiswap/">
-      <img src="https://rugdoc.io/assets/2021/06/rugdoc-review-badge-with-glow.png"/>
+      <img src="https://rugdoc.io/assets/2021/05/rugdoc-review-badge-for-light-bg.png" style={{height: "60px", marginLeft: "25px", marginTop: "5px",marginBottom: "10px" }}  height={60} />
       </a>
       </div>
       <SocialEntry>

@@ -48,10 +48,14 @@ function __rest(s, e) {
     return t;
 }
 
-function __spreadArray(to, from) {
-    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
-    return to;
+function __spreadArray(to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
 }
 
 function __makeTemplateObject(cooked, raw) {
@@ -1142,12 +1146,12 @@ var StyledBreadcrumbs = styled.ul(templateObject_2$k || (templateObject_2$k = __
 var insertSeparators = function (items, separator) {
     return items.reduce(function (accum, item, index) {
         if (index === 0) {
-            return __spreadArray(__spreadArray([], accum, true), [item]);
+            return __spreadArray(__spreadArray([], accum, true), [item], false);
         }
         return __spreadArray(__spreadArray([], accum, true), [
             React.createElement(Separator, { "aria-hidden": true, key: "seperator-" + index }, separator),
             item,
-        ]);
+        ], false);
     }, []);
 };
 var DefaultSeparator = React.createElement(Icon$1f, { color: "currentColor", width: "24px" });
@@ -1390,7 +1394,7 @@ var Bunny = styled.div(templateObject_2$i || (templateObject_2$i = __makeTemplat
 });
 var FallingBunnies = function (_a) {
     var _b = _a.count, count = _b === void 0 ? 30 : _b, _c = _a.size, size = _c === void 0 ? 32 : _c, _d = _a.iterations, iterations = _d === void 0 ? Infinity : _d, _e = _a.duration, duration = _e === void 0 ? 10 : _e;
-    var bunnies = __spreadArray([], Array(count)).map(function (_, index) { return (React.createElement(Bunny, { key: String(index), position: Math.random() * 100, iterations: iterations, duration: duration },
+    var bunnies = __spreadArray([], Array(count), true).map(function (_, index) { return (React.createElement(Bunny, { key: String(index), position: Math.random() * 100, iterations: iterations, duration: duration },
         React.createElement(Icon$13, { width: size, height: size }))); });
     return React.createElement("div", null, bunnies);
 };
@@ -1994,7 +1998,7 @@ var byTextDescending = function (getTextProperty) { return function (objectA, ob
 
 var sortByColumn = function (data, sortColumn, columns) {
     var isAscending = null;
-    var sortedRows = __spreadArray([], data);
+    var sortedRows = __spreadArray([], data, true);
     columns.forEach(function (column) {
         // if the row was found
         if (sortColumn === column.name) {
@@ -2045,7 +2049,7 @@ var createReducer = function () { return function (state, action) {
     var rowIds = {};
     switch (action.type) {
         case "SET_ROWS":
-            rows = __spreadArray([], action.data);
+            rows = __spreadArray([], action.data, true);
             // preserve sorting if a sort is already enabled when data changes
             if (state.sortColumn) {
                 rows = sortByColumn(action.data, state.sortColumn, state.columns);
@@ -2267,7 +2271,7 @@ var useTable = function (columns, data, options) {
         return __spreadArray([], state.columns.map(function (column) {
             var label = column.label ? column.label : column.name;
             return __assign(__assign({}, column), { render: makeHeaderRender(label, column.headerRender) });
-        }));
+        }), true);
     }, [state.columns]);
     useEffect(function () {
         if (options && options.filter) {
@@ -3512,7 +3516,7 @@ var PanelFooter = function (_a) {
     return (React.createElement(Container, null,
         React.createElement("div", null,
             React.createElement("a", { href: "https://jagosafer.io/anubiswap" },
-                React.createElement("img", { width: 230, height: 60, src: "https://jagosafer.io/flags/greenflag.svg" })),
+                React.createElement("img", { src: "https://jagosafer.io/flags/greenflag.svg", style: { height: "60px", width: "230px" }, width: 230, height: 60 })),
             React.createElement("a", { href: "https://rugdoc.io/project/anubiswap/" },
                 React.createElement("img", { src: "https://rugdoc.io/assets/2021/06/rugdoc-review-badge-with-glow.png" }))),
         React.createElement(SocialEntry, null,
